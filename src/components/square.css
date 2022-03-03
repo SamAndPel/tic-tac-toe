@@ -1,9 +1,9 @@
 .square {
-    background: #A3CEF1;
-    border: 3px solid #274C77;
+    background: var(--square-colour);
+    border: 0.1rem solid var(--bg-colour);
     font-size: 3rem;
     font-weight: bold;
-    width: 5rem;
-    height: 5rem;
+    width: var(--cell-size);
+    height: var(--cell-size);
     float: left;
 }

@@ -1,0 +1,5 @@
+.game-timeline .square {
+    width: var(--preview-cell-size);
+    height: var(--preview-cell-size);
+    font-size: 2rem;
+}

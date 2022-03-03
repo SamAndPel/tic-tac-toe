@@ -1,4 +1,13 @@
 /* https://coolors.co/palette/e7ecef-274c77-6096ba-a3cef1-8b8c89 */
+:root {
+    --text-colour: #E7ECEF;
+    --bg-colour: #274C77;
+    --square-colour: #A3CEF1;
+    --desired-grid-size: 50vh;
+    --preview-desired-grid-size: 10rem;
+    --cell-size: calc(var(--desired-grid-size) / 3);
+    --preview-cell-size: calc(var(--preview-desired-grid-size) / 3);
+}
 
 body {
     font: 20px "Century gothic", Futura, sans-serif;
@@ -7,7 +16,6 @@ body {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #274C77;
-    color: #E7ECEF;
-
+    background-color: var(--bg-colour);
+    color: var(--text-colour);
 }
