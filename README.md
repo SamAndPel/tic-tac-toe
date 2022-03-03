@@ -4,3 +4,4 @@ Following and extending the [React tutorial](https://reactjs.org/tutorial/tutori
 ## Additional features
 - Component code and styles have been split into separate files in `./src/components`.
 - Functionality for announcing a draw added.
+- Polished CSS.
