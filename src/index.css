@@ -1,4 +1,13 @@
+/* https://coolors.co/palette/e7ecef-274c77-6096ba-a3cef1-8b8c89 */
+
 body {
-    font: 14px Verdana, Futura, sans-serif;
+    font: 20px "Century gothic", Futura, sans-serif;
+    margin: 0;
+    height: 100%;
+    width: 100%;
     padding: 20px;
+    box-sizing: border-box;
+    background-color: #274C77;
+    color: #E7ECEF;
+
 }
