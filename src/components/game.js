@@ -68,7 +68,7 @@ class Game extends React.Component {
             return (
                 <li key={move}>
                     <button className="game-timeline-button" onClick={() => this.jumpTo(move)}>
-                        {move ? "Go to move #" + move : "Go to game start"}
+                        {move ? "Go to move #" + move : "Reset"}
                     </button>
                     <Preview gameState={history[move]} />
                 </li>
