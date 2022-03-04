@@ -3,6 +3,8 @@
     --text-colour: #E7ECEF;
     --bg-colour: #274C77;
     --square-colour: #A3CEF1;
+    --emph-colour: #6096BA;
+    --highlight-colour: #DC493A;
     --desired-grid-size: 50vh;
     --preview-desired-grid-size: 10rem;
     --cell-size: calc(var(--desired-grid-size) / 3);

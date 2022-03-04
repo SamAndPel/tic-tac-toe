@@ -40,13 +40,16 @@ class Game extends React.Component {
         for (let i = 0; i < lines.length; i++) {
             const [a, b, c] = lines[i];
             if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-                return squares[a];
+                return ({
+                    winningChar: squares[a],
+                    winningLine: [a, b, c]
+                });
             }
         }
         if (squares.includes(null)) {
             return null;
         } else {
-            return "draw";
+            return ({ winningChar: "draw", winningLine: [] });
         }
     }
 
@@ -67,14 +70,14 @@ class Game extends React.Component {
                     <button className="game-timeline-button" onClick={() => this.jumpTo(move)}>
                         {move ? "Go to move #" + move : "Go to game start"}
                     </button>
-                    <Preview squares={history[move].squares} />
+                    <Preview gameState={history[move]} />
                 </li>
             )
         });
 
         let status;
         if (current.winner) {
-            status = "Winner: " + current.winner;
+            status = "Winner: " + current.winner.winningChar;
         } else {
             status = "Next player: " + (this.state.xToPlay ? "X" : "O");
         }
@@ -83,7 +86,7 @@ class Game extends React.Component {
 
         return (
             <div className="game">
-                <Board squares={current.squares} onClick={(i) => this.handleClick(i)} />
+                <Board gameState={current} onClick={(i) => this.handleClick(i)} />
                 <div className="game-info">
                     <p>{status}</p>
                     <p>{currentStep}</p>

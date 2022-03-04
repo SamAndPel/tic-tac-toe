@@ -6,4 +6,13 @@
     width: var(--cell-size);
     height: var(--cell-size);
     float: left;
+    transition: 0.3s ease;
+}
+
+.square:not(.highlighted):hover {
+    background-color: var(--emph-colour);
+}
+
+.highlighted {
+    background-color: var(--highlight-colour);
 }

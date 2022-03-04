@@ -4,7 +4,13 @@ import "./board.css"
 
 class Board extends React.Component {
     renderSquare(i) {
-        return <Square value={this.props.squares[i]} onClick={() => this.props.onClick(i)} />;
+        return (
+            <Square
+                value={this.props.gameState.squares[i]}
+                onClick={() => this.props.onClick(i)}
+                isHighlighted={this.props.gameState.winner ? this.props.gameState.winner.winningLine.includes(i) : false}
+            />
+        );
     }
 
     render() {

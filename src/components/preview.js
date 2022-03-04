@@ -5,7 +5,7 @@ import "./preview.css";
 function Preview(props) {
     return (
         <Board
-            squares={props.squares}
+            gameState={props.gameState}
             onClick={() => {}}
         />
     );

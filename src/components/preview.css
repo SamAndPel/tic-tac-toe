@@ -3,3 +3,7 @@
     height: var(--preview-cell-size);
     font-size: 2rem;
 }
+
+.game-timeline .square:hover{
+    background-color: var(--square-colour);
+}
