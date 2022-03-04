@@ -54,6 +54,7 @@ class Game extends React.Component {
     }
 
     jumpTo(step) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
         this.setState({
             currentStep: step,
             xToPlay: (step % 2) === 0,

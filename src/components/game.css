@@ -30,11 +30,22 @@ ul {
 }
 
 .game-timeline-button {
+    background-color: var(--square-colour);
+    color: var(--grey-colour);
+    font-weight: bold;
     width: 9.8rem;
-    margin: 10px 11.5px 0;
+    margin: 10px 11.5px 2px;
     padding: 10px 10px;
     border: 0;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
+}
+
+.game-timeline-button:hover {
+    background-color: var(--emph-colour);
+}
+
+.game-timeline-button:active {
+    background-color: var(--highlight-colour);
 }

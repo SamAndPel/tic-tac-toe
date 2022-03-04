@@ -5,7 +5,8 @@
     --square-colour: #A3CEF1;
     --emph-colour: #6096BA;
     --highlight-colour: #DC493A;
-    --desired-grid-size: 50vh;
+    --grey-colour: #292928;
+    --desired-grid-size: min(45vh, 80vw);
     --preview-desired-grid-size: 10rem;
     --cell-size: calc(var(--desired-grid-size) / 3);
     --preview-cell-size: calc(var(--preview-desired-grid-size) / 3);
