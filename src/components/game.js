@@ -85,8 +85,6 @@ class Game extends React.Component {
             statusSuffix = this.state.xToPlay ? "X" : "O";
         }
 
-        const currentStep = "Currently at move: " + this.state.currentStep;
-
         return (
             <div className="game">
                 <Board gameState={current} onClick={(i) => this.handleClick(i)} />
