@@ -32,7 +32,6 @@ ul {
 .game-timeline-button {
     background-color: var(--square-colour);
     color: var(--grey-colour);
-    font-weight: bold;
     width: 9.8rem;
     margin: 10px 11.5px 2px;
     padding: 10px 10px;
