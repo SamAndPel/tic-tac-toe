@@ -68,7 +68,7 @@ class Game extends React.Component {
             return (
                 <li key={move}>
                     <button className="game-timeline-button" onClick={() => this.jumpTo(move)}>
-                        {move ? "Go to move #" + move : "Reset"}
+                        {move ? "Jump to move " + move : "Reset"}
                     </button>
                     <Preview gameState={history[move]} />
                 </li>
@@ -76,10 +76,13 @@ class Game extends React.Component {
         });
 
         let status;
+        let statusSuffix
         if (current.winner) {
-            status = "Winner: " + current.winner.winningChar;
+            status = "Winner: ";
+            statusSuffix = current.winner.winningChar;
         } else {
-            status = "Next player: " + (this.state.xToPlay ? "X" : "O");
+            status = "Next player: ";
+            statusSuffix = this.state.xToPlay ? "X" : "O";
         }
 
         const currentStep = "Currently at move: " + this.state.currentStep;
@@ -88,8 +91,8 @@ class Game extends React.Component {
             <div className="game">
                 <Board gameState={current} onClick={(i) => this.handleClick(i)} />
                 <div className="game-info">
-                    <p>{status}</p>
-                    <p>{currentStep}</p>
+                    <p>{status}<b>{statusSuffix}</b></p>
+                    <p>Currently at move: <b>{this.state.currentStep}</b></p>
                     <ol className="game-timeline">{moves}</ol>
                 </div>
             </div>
